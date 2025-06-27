@@ -1,0 +1,371 @@
+#portfolio {
+  /* padding-bottom: 50px; */
+  padding: 90px var(--offset) 50px;
+}
+@media screen and (max-width: 768px) {
+  #portfolio {
+    padding: 90px var(--gutter) 50px;
+  }
+}
+.project-container,
+.project-container-null {
+  width: 100%;
+  background-color: var(--bg-gray);
+  border-radius: 10px;
+  padding: var(--gutter);
+  display: flex;
+  gap: var(--gutter);
+  margin-bottom: var(--gutter);
+  cursor: pointer;
+  position: relative;
+}
+
+.project-container:hover {
+  top: -2px;
+}
+.project-pic {
+  width: 150px;
+  height: 110px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-pic img {
+  width: 100%;
+  object-fit: contain;
+  transition: 0.3s;
+  padding: 1rem 2rem;
+}
+.project-container:hover .project-pic img {
+  transform: scale(1.1);
+}
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.project-content--team {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 500px){
+  .project-content--team {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    justify-content: center;
+  }
+  .project-content--introduction{
+    text-align: center;
+  }
+}
+.project-content--team li {
+  background-color: var(--bg-5);
+  padding: 6px 8px;
+  font-size: var(--body2);
+  border-radius: 5px;
+  color: black;
+}
+.project-content--team li.leader {
+  background-color: var(--blue);
+  color: white;
+}
+.project-content--name {
+  font-size: var(--heading3);
+  font-weight: 900;
+  
+}
+.project-content--introduction {
+  font-size: var(--body1);
+  color: var(--subtext-gray);
+  line-height: 2rem;
+  word-break: keep-all;
+}
+/*찌그러진 hamburger효과*/
+.project-more {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: var(--gutter);
+  top: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.project-more > div {
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-5);
+  transition: 0.3s;
+}
+.project-more > div:nth-child(1) {
+  margin-right: auto;
+}
+.project-more > div:nth-child(3) {
+  margin-left: auto;
+}
+.project-container:hover .project-more > div:nth-child(1),
+.project-container:hover .project-more > div:nth-child(3) {
+  width: 50%;
+}
+@media screen and (max-width: 650px){
+  .project-container,
+  .project-container-null {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: var(--offset);
+  }
+  .project-content--name{
+    margin-bottom: 10px;
+  }
+  .project-pic {
+    width: min(75%, 250px);
+    height: 160px;
+  }
+  .project-content--team {
+    justify-content: center;
+  }
+}
+/* detail modal */
+.portfolio-detailModal {
+  position: fixed;
+  width: 90%;
+  height: calc(100vh - 40px - 40px);
+  border-radius: var(--gutter);
+  top: 40px;
+  background-color: var(--bg-gray);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding-bottom: 2rem;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.overlay.portfolioOverlay{
+  z-index: -1;
+}
+.portfolio-detailModal .project-pic img {
+  width: 100%;
+  object-fit: contain;
+}
+.portfolio-detailModal .project-pic {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-detailModal .project-content--name {
+  font-size: var(--heading2);
+}
+.project-modal--header {
+  padding: var(--offset);
+  border-bottom: 1px solid var(--line-gray);
+  border-radius: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 700px){
+  .project-container.project-modal--header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--gutter);
+    padding-top: var(--offset);
+
+  }
+  .project-modal--header .project-content--name{
+    margin-bottom: 10px;
+  }
+  .project-modal--header .project-pic {
+    width: min(75%, 250px);
+    height: 160px;
+  }
+  .project-modal--header .project-content--team {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    justify-content: center;
+  }
+}
+.project-modal--body-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--bg-gray);
+  padding: var(--offset);
+}
+.project-modal--body-container .project-screenshot-container {
+  height: 30rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-modal--body-container .project-screenshot-swiper {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.project-modal--body-container .project-screenshot-swiper .pf-swiper-slide {
+  height: 30rem;
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-modal--body-container .pf-swiper-slide img,
+.project-modal--body-container .project-screenshot-container img {
+  height: 30rem;
+  width: 40rem;
+  object-fit: contain; 
+}
+.project-modal--body-container .project-screenshot-container img:not(:last-child) {
+  margin-right: 2rem;
+}
+@media screen and (max-width: 780px) {
+  .project-modal--body-container .project-screenshot-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .project-modal--body-container .project-screenshot-swiper .pf-swiper-slide {
+    height: 20rem;
+    width: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-modal--body-container .pf-swiper-slide img,
+  .project-modal--body-container .project-screenshot-container img {
+    height: 20rem;
+    width: 35rem;
+    object-fit: contain; 
+  }
+  .project-modal--body-container .project-screenshot-container img:not(:last-child) {
+    margin-right: 0;
+    padding-bottom: 1rem;
+  }
+}
+.project-modal--body {
+  flex: 1;
+  display: flex;
+  gap: var(--gutter);
+}
+.project-modal--left {
+  font-size: var(--heading2);
+  font-weight: 900;
+  width: 200px;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
+}
+@media screen and (max-width: 780px){ 
+  .project-modal--left{
+    display: none;
+  }
+}
+.project-modal--right {
+  flex: 1;
+  /* display: flex; */
+  height: 100%;
+  flex-direction: column;
+  gap: var(--offset);
+}
+.project-detail--title {
+  font-size: var(--subheading);
+  color: var(--green-1);
+  font-weight: 900;
+  margin-bottom: var(--gutter);
+}
+.project-detail--parag {
+  font-size: var(--body1);
+  line-height: 2.5rem;
+  color: var(--subtext-gray);
+  word-break: keep-all;
+  margin-bottom: 3rem;
+}
+.project-sourceCode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.project-sourceCode:hover {
+  position: relative;
+  top: -2px;
+}
+.github-emoji {
+  width: 40px;
+}
+.github-emoji img {
+  width: 100%;
+}
+.project-sourceCode span {
+  font-size: var(--body1);
+}
+
+.portfolio-modal-close {
+  width: 40px;
+  position: absolute;
+  top: var(--offset);
+  right: var(--offset);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-modal-close i {
+  font-size: 3rem;
+}
+@media screen and (min-width: 550px) {
+  .portfolio-modal-close:hover {
+    top: calc(var(--offset) - 2px);
+  }
+}
+@media screen and (max-width: 550px){
+  .project-container.project-modal--header .project-pic,
+  .project-container.project-modal--header .project-content--team{
+    display: none;
+  }
+  .portfolio-modal-close {
+    top: var(--gutter);
+    right: var(--gutter);
+  }
+  .portfolio-detailModal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 0;
+  }
+}
+
+.project-modal--body-container::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.project-modal--body-container::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 1rem;
+  padding: 1rem;
+}
+.project-modal--body-container::-webkit-scrollbar-thumb {
+  
+  background-color: var(--scroll-bar-gray);
+  border-radius: 30px;
+}
+.portfolio-detailModal .project-container:hover {
+  top: 0px;
+}

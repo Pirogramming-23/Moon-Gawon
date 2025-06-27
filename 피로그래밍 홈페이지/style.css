@@ -1,0 +1,41 @@
+/* style.css */
+.custom-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(131, 85, 151);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.custom-button::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(27, 38, 130, 0.3);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: 0;
+}
+
+.custom-button:hover::before {
+  width: 200%;
+  height: 500%;
+}
+
+.custom-button span {
+  position: relative;
+  z-index: 1;
+}
+* {
+  cursor: auto !important;
+}
+
+
