@@ -1,0 +1,2819 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000000">
+
+  <!-- og -->
+  <meta property="og:url" content="https://pirogramming.com/" />
+  <meta property="og:title" content="피로그래밍" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:image"
+    content="https://pirogramming.com/static/images/og.png"
+  />
+  <meta property="og:description" content="비전공자 웹 프로그래밍 동아리" />
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Pirogramming">
+  
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- icon : css.gg -->
+  <link href="https://css.gg/css" rel="stylesheet" />
+  <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/reset.css" />
+  <!-- <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/base.css" /> -->
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/cursor.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/utils.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/interview.css" />
+  <!-- <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/portfolio.css" /> -->
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/gallerySwiper.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/loading.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/recruit_main.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/textSpread.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/faq.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/acceptance.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/accepted.css?after" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/rejected.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/longtimenosee.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/recruit/error.css" />
+  <link rel="stylesheet" href="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/css/graduate.css" />
+
+  <!-- libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>피로그래밍</title>
+</head>
+
+<body style="position: relative">
+  <div class="container flex_cc" style="position: relative">
+    <div id="custom_cursor" class="custom-cursor">
+      <div class="custom-cursor-icon"></div>
+    </div>
+    <header id="main-header">
+      <div class="header--container max-width-1200">
+        <h1>
+          <a href="/"><img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/icons/logo.svg" alt="logo" /></a>
+        </h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/interview/">Interview</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/recruit/">Recruit</a></li>
+          <!-- 졸업장 조회 -->
+          <!-- <li><a href="/graduate/">Graduate</a></li> -->
+        </ul>
+        <label id="hamburger-icon">
+          <input type="checkbox" />
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+      </div>
+    </header>
+    <div id="hamburger-content" class="avoid-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/interview/">Interview</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/recruit/">Recruit</a></li>
+        <!-- 졸업장 조회 -->
+        <!-- <li><a href="/graduate/">Graduate</a></li> -->
+      </ul>
+    </div>
+    <div class="overlay" id="hamburgerOverlay"></div>
+    
+<section class="max-width-1200 avoid-nav" id="iv-section">
+  <div class="section-th interview-th flex_between">
+    
+    <div class="section-th--next"></div>
+    
+    <div class="section-th--curr" levels="[22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10]">22기</div>
+    
+    <a href="/interview/?level=21">
+      <div class="section-th--prev">
+        <span>21기</span>
+        <i class="ri-arrow-right-s-line"></i>
+      </div>
+    </a>
+    
+  </div>
+  <section class="interview-contents">
+    
+    <div class="interview-card" data-pk="238">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250317_110554392_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%B2%E1%84%8B%E1%85%B5%E1%86%AF553.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김규일</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">더 나은 내일로!</div>
+    </div>
+    
+    <div class="interview-card" data-pk="239">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_1993_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%89%E1%85%A5%E1%86%AB%E1%84%8C%E1%85%AE302.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김선주</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">해야 한다</div>
+    </div>
+    
+    <div class="interview-card" data-pk="240">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_9652_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB562.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김수연</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">파이팅! 파이팅!</div>
+    </div>
+    
+    <div class="interview-card" data-pk="241">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_6225_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A9365.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김영호</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">홍익대학교 재학중인 22기 김영호입니다!</div>
+    </div>
+    
+    <div class="interview-card" data-pk="242">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250401_141047277_-__%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8B%E1%85%A6%E1%86%AF%E1%84%90%E1%85%A6%E1%86%A8%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%AA%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8_%E1%84%89%E1%85%A9%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%E1%84%8B%E1%85%B0%E1%84%8B%E1%85%A5%E1%84%92%E1%85%A1%E1%86%A8%E1%84%87%E1%85%AE912.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김예원</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">그래도 해야지 어떡해</div>
+    </div>
+    
+    <div class="interview-card" data-pk="243">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC159.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김은경</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">피로와 열정 !</div>
+    </div>
+    
+    <div class="interview-card" data-pk="244">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/1740577368077_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%B2%E1%86%BC%E1%84%92%E1%85%A1%E1%86%B8%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8_%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%B2%E1%84%90%E1%85%A5%E1%84%80%E1%85%AA%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%AA24.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김은성</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">피로합시다</div>
+    </div>
+    
+    <div class="interview-card" data-pk="245">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250318_175842975_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%A2%E1%84%8B%E1%85%AF%E1%86%AB174.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김재원</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">웃으면 복이 와요</div>
+    </div>
+    
+    <div class="interview-card" data-pk="246">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A9%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%90%E1%85%A2%E1%84%85%E1%85%B5%E1%86%AB172.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김태린</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">해봅시다</div>
+    </div>
+    
+    <div class="interview-card" data-pk="247">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/20241223_091505_-_Din_H787.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">김현진</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">Aight ! Aight !</div>
+    </div>
+    
+    <div class="interview-card" data-pk="248">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/piro_profile_-_%E1%84%80%E1%85%A2%E1%86%BC_%E1%84%84%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%86%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%B5689.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">남경민</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">피로와 함께 overcome!</div>
+    </div>
+    
+    <div class="interview-card" data-pk="249">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250318_150317016_-_%E1%84%82%E1%85%A1_%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8B%E1%85%A1_23_3138262.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">민설아</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">호호 부는 튜브</div>
+    </div>
+    
+    <div class="interview-card" data-pk="250">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A1%E1%86%A8%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%AE%E1%86%A8_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%AE%E1%86%A8165.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">박건욱</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">일단 하자</div>
+    </div>
+    
+    <div class="interview-card" data-pk="251">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B5%E1%84%85%E1%85%A9_%E1%84%91%E1%85%B3%E1%84%89%E1%85%A1_-_pirogramming_official932.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">박서정</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">잔디로 초원 만들기🌱</div>
+    </div>
+    
+    <div class="interview-card" data-pk="252">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250124_182922022_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB510.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">박수연</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">매일 하나씩</div>
+    </div>
+    
+    <div class="interview-card" data-pk="253">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_0626_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%90%E1%85%A2%E1%84%92%E1%85%B4502.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">박태희</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">다 할 수 있다!</div>
+    </div>
+    
+    <div class="interview-card" data-pk="254">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB208.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">박혜린</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">너무 너무 고마운 피로그래밍</div>
+    </div>
+    
+    <div class="interview-card" data-pk="255">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9_-_%E1%84%8B%E1%85%B2%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AB663.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">유승인</div>
+          
+          <div>
+            <span class="double-major-badge">복수전공</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">알찬 방학은 피로와 함께</div>
+    </div>
+    
+    <div class="interview-card" data-pk="256">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B5%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%84%87%E1%85%B2_-_%E1%84%89%E1%85%B5%E1%84%8B%E1%85%B3%E1%86%AB201.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">이시은</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">한 걸음 한 걸음씩</div>
+    </div>
+    
+    <div class="interview-card" data-pk="257">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250330_220652302_-_%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AF%E1%86%AB25.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">이주원</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">일단 도전</div>
+    </div>
+    
+    <div class="interview-card" data-pk="258">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_5983_-_%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%B5803.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">임유지</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">디버깅하다 인생도 디버깅 중</div>
+    </div>
+    
+    <div class="interview-card" data-pk="259">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_4669_-_%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%89%E1%85%AE120.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">임진수</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">하면 함, 가면 감.</div>
+    </div>
+    
+    <div class="interview-card" data-pk="260">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/piro22_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%84%92%E1%85%AE%E1%86%AB_-_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%84%92%E1%85%AE%E1%86%AB337.jpeg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">장재훈</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">배울게 너무 많아</div>
+    </div>
+    
+    <div class="interview-card" data-pk="261">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB_-_%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%AB670.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">정원준</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">머지할게</div>
+    </div>
+    
+    <div class="interview-card" data-pk="262">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_2437_2_-_%E1%84%8C%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%BC484.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">조주영</div>
+          
+          <div>
+            <span class="non-major-badge">비전공자</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">hi</div>
+    </div>
+    
+    <div class="interview-card" data-pk="263">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250320_233916509_-_leloich_05346.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">최민석</div>
+          
+          <div>
+            <span class="double-major-badge">복수전공</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">지피티 프로 갈굼러</div>
+    </div>
+    
+    <div class="interview-card" data-pk="264">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-04-04_1498.png" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">최준혁</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">오히려 좋아</div>
+    </div>
+    
+    <div class="interview-card" data-pk="265">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/JAWS_-_%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A5804.jpg" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">한종서</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">정진</div>
+    </div>
+    
+    <div class="interview-card" data-pk="266">
+      <div class="project-more">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="interview-card--header">
+        <div class="interview-profile--pic flex_cc">
+          
+            <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%86%E1%85%A5%E1%86%BC%E1%84%86%E1%85%A5%E1%86%BC_-_dao_hong619.png" alt="" />
+          
+        </div>
+        <div class="interview-header--right">
+          <div class="interview-profile--name">홍다오</div>
+          
+          <div>
+            <span class="major-badge">전공자<span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="interview-card--intro">야호</div>
+    </div>
+    
+  </section>
+</section>
+<div class="interview-overlay"></div>
+
+<div class="interview-detailModal displayNone" pk="238">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250317_110554392_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%B2%E1%84%8B%E1%85%B5%E1%86%AF553.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김규일님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        더 나은 내일로!
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 백엔드 개발자가 되고싶은 컴퓨터공학과 김규일입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        팀 과제를 할 때 과제 마감 당일 새벽에 오류가 발생해서 새벽 5시까지 다같이 밤새며 오류를 해결했던 때가 가장 기억에 남아요. 모두 자기 파트 문제인 것처럼 같이 고민해주던 순간이 기억나네요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이 진로를 바라보는 시야가 넓어지고 구체화 된 것 같아요. 좋은 사람들을 알게 된 것도 있습니다. 기술, 마음가짐 등 많은 것을 배우고 자극 받는 시간이었어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        방학 중 할 수 있는 가장 알찬 활동이라고 생각합니다. 망설이지 마세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="239">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_1993_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%89%E1%85%A5%E1%86%AB%E1%84%8C%E1%85%AE302.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김선주님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        해야 한다
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        저는 할 수 있다가 아닌 해야 한다는 마음가짐으로 성장하는 김선주입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        팀과제를 하면서 팀원들과 밤샘 작업을 하고 다같이 아침을 먹고 수업을 들으러 간 것이 가장 기억에 남습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 이전에는 개발에 대한 두려움이 많았는데, 피로그래밍을 통해 두려움보다 재미를 느끼게 되었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        걱정하지말고 일단 Go해보세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="240">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_9652_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB562.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김수연님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        파이팅! 파이팅!
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기로 활동한 김수연입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        아무래도 마지막 팀 프로젝트가 가장 기억에 남습니다. 3주간의 기간동안 열정적인 팀원들과 함께했었기에 성공적으로 프로젝트를 마무리했던 것 같습니다!ㅎㅎ
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 이전에는 웹 개발에 대한 지식이 거의 없었지만, 지금은 자신감을 갖고 프로젝트에 참여할 수 있을 정도로 성장했습니다. 개발 실력뿐만 아니라 좋은 사람들을 많이 만나 함께 배우고 소통할 수 있어서 정말 뜻깊은 시간이었습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍은 개발을 처음 접하는 분들도 쉽게 이해하고 많은 걸 배워갈 수 있는 정말 좋은 동아리에요! 고민하지 마시고 지원하세요!~!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="241">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_6225_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A9365.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김영호님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        홍익대학교 재학중인 22기 김영호입니다!
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요, 피로그래밍 22기 홍익대학교 컴퓨터공학과 재학중인 김영호입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        당연히 마지막 팀 프로젝트를 하면서 있었던 경험 혹음 추억들이 기억에 많이 남습니다!<br>같은 목표를 가지고 열심히 노력하며 얻는 경험은 정말 값진 것 같습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        무엇이든 배워볼 수 있겠다는 자신감을 가지게 되었습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이전기수 선배들이 최선을 다해 알려주시는 만큼 단기간 내에 빠르게 학습할 수 있고 여러가지 연결이 잘 되있어 체계적인 동아리인 것 같습니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="242">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250401_141047277_-__%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8B%E1%85%A6%E1%86%AF%E1%84%90%E1%85%A6%E1%86%A8%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%AA%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8_%E1%84%89%E1%85%A9%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%E1%84%8B%E1%85%B0%E1%84%8B%E1%85%A5%E1%84%92%E1%85%A1%E1%86%A8%E1%84%87%E1%85%AE912.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김예원님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        그래도 해야지 어떡해
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요~피로그래밍 22기 활동했던 김예원입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        무엇보다도 프로젝트 기간이 가장 기억에 남아요. 코디나우 최고!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        프론트엔드 이외에는 아무것도 몰랐던 제가 장고부터 배포까지 직접 경험하며 웹개발 전반에 대한 지식을 얻을 수 있었어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        몰입의 경험, 열정적인 동료를 만날 수 있습니다~~
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="243">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC159.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김은경님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        피로와 열정 !
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기로 활동했던 김은경입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        저는 최종 프로젝트로 참여했던 Cody Now 개발이 가장 기억에 남아요 ㅎㅎ 처음으로 제대로 된 프로젝트를 해봤고, 좋은 팀원들과 함께 성공적으로 마무리할 수 있어서 정말 뜻깊었어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 이전에는 개발을 하면서도 ‘이게 맞나…’ 싶은 생각이 많았어요. 그만큼 자신도 없고, 말 그대로 코린이 그 자체였죠. 그런데 피로그래밍을 하면서 도전적인 마인드가 생겼고, 이제는 두려움 없이 개발에 임할 수 있게 됐어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        열정만 있다면 충분해요! 개발이 궁금하다면, 지금 바로 피로그래밍에 지원하세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="244">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/1740577368077_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%B2%E1%86%BC%E1%84%92%E1%85%A1%E1%86%B8%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%A8_%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%B2%E1%84%90%E1%85%A5%E1%84%80%E1%85%AA%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%AA24.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김은성님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        피로합시다
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기 활동한 김은성입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        최종 프로젝트 때 열심히 회의 마치고 팀원들과 즐겁게 식사했던 때가 가장 기억에 남습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        프로그래밍에 대한 자신감이 생겼고 좋은 사람들과 함께 프로젝트를 진행하는 재미를 느끼게 된 것 같습니다. 앞으로도 다른 여러 프로젝트들을 해보고 싶습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        좋은 사람들과 유익한 경험을 할 수 있는 기회입니다. 고민하지 말고 지원하세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="245">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250318_175842975_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%A2%E1%84%8B%E1%85%AF%E1%86%AB174.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김재원님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        웃으면 복이 와요
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 ! 한양대학교 컴퓨터소프트웨어학부 재학중인 피로그래밍 22기 부원 김재원입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        잠까지 줄여가며 프로젝트를 하던 순간이 가장 기억에 남아요.<br>&#x27;이거 왜 안 돼?&#x27; 하면서 옆 동료와 농담을 주고받고,<br>&#x27;밥은 먹고 하자&#x27;라고 말했으면서도 밥시간을 한참 넘길 때까지 자리에서 못 일어나던 팀원들의 모습이 아직도 생생하네요. ㅎㅎ
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이전에는 전공자임에도 불구하고 개발에 대한 막연한 두려움이 컸고,<br>&#x27;내가 이 길을 계속 가는 게 맞을까?&#x27;라는 고민을 정말 자주 했어요.<br>하지만 피로그래밍을 통해 처음으로 FE/BE 개발과 협업을 경험하면서,<br>이전에는 생각지도 못했던 개발의 재미를 느꼈고,<br>내가 무엇을 잘하고, 앞으로 무엇을 하고 싶은 지 알게 된 소중한 시간이었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        짧은 시간 무언가에 몰두해보는 경험은 굉장히 귀한 경험이에요.<br>심지어 그 경험을 정말 좋은 사람들과 함께 할 수 있습니다 !
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="246">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A9%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB_-_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%90%E1%85%A2%E1%84%85%E1%85%B5%E1%86%AB172.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김태린님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        해봅시다
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기 김태린입니다
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        22기 활동한 모든 순간이 새록새록 떠오르며 기억에 남는데요 아무래도 그 중 최종프로젝트가 가장 기억에 남습니다. 지성팍 팀원들과 한달 동안 코드 짜고 문제 생기면 바로 디코로 모여 다 같이 머리 맞대고 의논했던 시간이 당시에는 힘들었지만 지금 돌아보면 진짜 재밌고 뿌듯했던 경험들입니다.그리고 햄버거 소모임도 기억에 남는데요! 햄최몇 도전하며 금방 친해질 수 있었어요
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        가장 큰 변화는 개발을 향한 자신감입니다. 전에는 겁을 먹었다면, 이제는 일단 부딪혀보고, 조금씩 해보려는 자세로 바뀌었습니다
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발에 진심이고 열정있는 사람들을 만나고 싶은 분들이라면 정말 강추! 합니다 정말 열정만 있으면 어느새 개발자의 꿈에 한 발짝 가까워진 본인을 만나실 수 있으실 거예요..
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="247">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/20241223_091505_-_Din_H787.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 김현진님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        Aight ! Aight !
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기로 활동했었던 김현진입니다 😊
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        매주 세션을 진행하고 새로운 팀원들과 팀 프로젝트를 했던 순간이 기억에 남았습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 이전에는, 개발자가 되고 싶은데도 어떻게 해야할지 몰랐지만, 피로그래밍을 마치고 나서 그 방향성을 잡을 수 있었고, 여러 번의 협업을 통해 미래에 어떻게 협업을 진행해야 하는지 깨닫게 되었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        자신이 개발자가 되고 싶은데 많이 부족한거 같다? 무조건 오세요..! 피로그래밍이 2달이라는 짧은 시간 안에 당신을 개발자 지망생에서 개발자로 탈바꿈 시켜드립니다 👍
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="248">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/piro_profile_-_%E1%84%80%E1%85%A2%E1%86%BC_%E1%84%84%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%86%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%B5689.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 남경민님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        피로와 함께 overcome!
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        피로그래밍 22기로 활동한 남경민입니다! 반가워요~🤗
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        두 달 동안 피로와 함께한 모든 순간이 소중한 성장 밑거름이 되었기에 고르기 힘들지만, 팀원들과 열심히 개발한 최종 프로젝트를 직접 배포하고 사용한 경험이 가장 기억에 남아요. &quot;우리가 개발한 서비스를 디바이스에서 직접 사용해 보다니!&quot;라며 굉장히 짜릿해했던 기억이 생생해요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        &#x27;개발&#x27;과 &#x27;프로젝트&#x27;에 대한 막연한 두려움을 타파하고 긍정적인 인식을 쌓을 수 있었어요. 개발뿐만 아니라, &#x27;새로운 도전&#x27;에 대해 끈기 있게 부딪히는 열정과 마음가짐을 몸소 배우며 체득할 수 있었던 게 참 좋았어요. 더하여 체력의 소중함을 느끼고 헬스라는 건강한 취미도 얻었답니다!💪
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        동료들과 함께 으쌰으쌰 하며 성장할 기회, 놓치기엔 너무 아깝지 않나요? 당신의 방학을 유의미하게 채워줄 경험이라고 감히 자부합니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="249">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250318_150317016_-_%E1%84%82%E1%85%A1_%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8B%E1%85%A1_23_3138262.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 민설아님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        호호 부는 튜브
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기로 활동했던 민설아입니다 ๑•‿•๑
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        MT에서 2차 아이디어를 진행했던 날, 팀원이 발표되던 순간이 가장 기억에 남습니다! <br>좋은 팀원들을 만나 프로젝트를 진행할 수 있어 좋았어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍을 하기 전에는 프로젝트 경험도 적고, 코딩에 대한 자신감이 부족했어요. <br>피로그래밍을 통해 지식을 쌓고, 생각만 했던 서비스를 실제로 구현해보면서 개발에 대한 자신감을 가질 수 있었어요!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발 초보더라도 세션을 통해 실력을 쌓을 수 있고, Git 부터 Django, 협업까지 정말 단기간에 많은 경험을 쌓을 수 있어요! 하면 된다🔥
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="250">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A1%E1%86%A8%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%AE%E1%86%A8_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%AE%E1%86%A8165.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 박건욱님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        일단 하자
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요. 피로그래밍 22기 박건욱입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        단체로 프로그래밍을 해보는 첫 번째 경험이었기에 좋았습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        Django라는 프레임워크를 사용할 수 있게 되었으며, 기획 등 프로그래밍 외적 역량도 늘어났습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        웹 개발을 체험할 수 있는 좋은 동아리입니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="251">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B5%E1%84%85%E1%85%A9_%E1%84%91%E1%85%B3%E1%84%89%E1%85%A1_-_pirogramming_official932.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 박서정님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        잔디로 초원 만들기🌱
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기로 활동했던 박서정입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        첫 세션을 들었을 때가 가장 기억에 남아요! 같은 대학생이 이렇게 퀄리티 높고 이해하기 쉬운 강의를 준비할 수 있다는 것이 정말 신선한 충격이었어요. 피로그래밍을 졸업하면 나도 저렇게 멋지게 강의할 수 있을까? 라는 생각을 했었는데, 어느새 저도 졸업을 했네요 ㅎㅎ
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발 실력도 성장했지만, 가장 큰 변화는 다양한 학교의 열정 넘치는 분들을 만나면서 뜨거운 에너지를 가진 대학생들이 많다는 걸 직접 느낀 순간들이었어요. 새벽까지 이어지는 커밋 기록과 모각코 방에서의 토론. 그 열정이 고스란히 전해져, 저 역시 더 크게 성장할 수 있었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발을 시작하고 싶었지만 문법 공부에서 멈춰버린 분, 내가 가진 코딩 지식으로 실제 웹을 만들어보고 싶은 분, 방학 동안 깊이 있는 협업을 경험하고 싶은 분, 그리고 이번 기회에 웹 개발을 기초부터 차근차근 익히고 싶은 분이라면, 망설이지 말고 지원하세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="252">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250124_182922022_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB510.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 박수연님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        매일 하나씩
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기로 활동한 동국대학교 정보통신공학과 박수연입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        최종 프로젝트 팀 구성을 위한 아이디어 발표회에서 제 아이디어가 선정된 순간이 가장 기억에 남습니다. 막연히 머릿속에만 그리던 아이디어가 실제로 구현될 수 있다는 기대감에 무척 설렜던 기억이 납니다. 프로젝트 기간 동안 부족한 점이 많은 팀장이었지만, 팀원들과 함께해주었기 때문에 가장 크게 성장할 수 있었고, 애정을 담아 프로젝트도 완성할 수 있었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이제는 새로운 것에 도전할 때 망설이는 시간이 줄었습니다. 개발은 저에게 미지의 영역이었고, 재능 있는 사람들만 할 수 있는 일이라고 생각했었습니다. 하지만 피로그래밍을 통해 방학 동안 꾸준히 공부하며 개발에 한 걸음 가까워질 수 있었고, 새로운 것에 도전하는 용기를 얻게 되었습니다. 힘들고 어려운 순간이 있어도 목표를 향해 나아가는 작은 한 걸음이 얼마나 중요한지 깨닫게 된 소중한 경험이었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        인생에서 가장 의미 있는 두 달이 될 것이라 자부합니다 :)
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="253">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_0626_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%90%E1%85%A2%E1%84%92%E1%85%B4502.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 박태희님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        다 할 수 있다!
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요, 피로그래밍 22기로 활동했던 박태희 입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        최종 프로젝트가 가장 기억에 남습니다~ 세션을 들으며 할 수 있을까 걱정만 되었던 팀 프로젝트였었는데 막상 시작하니 누구보다 애정을 갖고 열심히 참여하게 되었습니다
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발이 어떻게 하는건가요…? -&gt; 깃허브는 이제 껌이지~, 이런식으로 공부하고 실습해보면 되는구나!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        처음이라 아무것도 모르더라도 다 할 수 있어요!! 저도 많이 망설였었는데 정말 최고의 선택이었던 것 같아요
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="254">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB_-_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB208.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 박혜린님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        너무 너무 고마운 피로그래밍
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기, 온기록팀의 팀장으로 활동했었던 박혜린이라고 합니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        피로그래밍을 수료했던 날입니다! 지원하기 전에 걱정도 고민도 많았었는데 수료하기까지 열심히 노력해왔던 모습들이 주마등처럼 스쳐지나가면서 제 스스로가 기특했던 것 같아요!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        인생의 첫 프로젝트를 피로그래밍에서 하게 되었던 점이 저에게 가장 큰 변화를 가져왔습니다.<br>프로젝트 경험이 없어서 개발자라는 직무가 막연하게만 느껴졌었는데 피로그래밍을 통해 어떤 것들을 더 공부해보고 싶은지 가닥이 잡히게 되어서 이 점이 피로그래밍에서 얻은 가장 큰 변화입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        혹시 실력이 부족해서 고민 중이시라면 고민하실 필요 없습니다. 피로그래밍은 열정만 있다면 누구든 할 수 있습니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="255">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9_-_%E1%84%8B%E1%85%B2%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AB663.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 유승인님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        알찬 방학은 피로와 함께
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로 22기 유라비팀 유승인입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        좋은 팀원들과 함께했던 프로젝트가 기억에 남아요. 지금까지 진행했던 프로젝트 중에서 가장 마음이 잘 맞고 열심히 하는 팀원들과 함께 매일 밤새는 프로젝트를 즐겁게 할 수 있었던게 큰 행운이였던것 같습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍은 저한테 아주 큰 의미가 있는 동아리였어요! 새로운 사람들과 일정기간동안 만족할만한 결과물을 만들수 있다는점이 너무 좋았고, 좋은 커리큘럼과 함께 집중적으로 개발 실력을 늘리기에는 누구보다 좋은 동아리라고 생각해요. 피로그래밍을 하기전에는 문제를 해결할때 고민하는 시간이 길어지며 힘들어했던적이 많았는데 피로그래밍 이후에는 일단 고민보다 뭐라도 시도해보며 그때그때 문제를 해결하는 능력이 많이 향상되었다고 생각해요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        처음에는 아무생각이 없었지만, 끝으로 갈수록 정말 애정이 많이 생긴 동아리인데 적어도 이 동아리를 했다는걸 후회하는 사람은 한명도 없을것이라고 생각해요. 두달이라는 시간동안 누구보다 많은 경험으로 개발 관련 지식이 늘어나는 동아리이고, 좋은 사람들을 얻어갈 수 있는 동아리이기 때문에 피로그래밍에서 활동하며 변화 한 본인을 직접 느껴봤으면 좋겠습니다. 화이팅~!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="256">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B5%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%84%87%E1%85%B2_-_%E1%84%89%E1%85%B5%E1%84%8B%E1%85%B3%E1%86%AB201.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 이시은님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        한 걸음 한 걸음씩
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요, 피로그래밍 22기로 활동했던 정보통신공학과 재학 중인 이시은 입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        마지막 과제를 제출하던 순간이 가장 기억에 남는 것 같아요. 한달 간 정말 피로그래밍에 몰입하며 살았는데 드디어 끝이라니는 기쁨과 함께 해냈다는 성취감이 크게 느껴졌습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍을 수료하고 난 후, 코딩을 대하는 자세가 완전히 달라졌습니다. 이전에는 실습과 프로젝트에 대한 막연한 두려움이 있었는데, 22기로 활동을 통해 눈에 띄게 실력이 성장했고, 그만큼 자신감도 붙었습니다. 이후, 새로운 도전에도 주저하지 않고 한 걸음씩 나아갈 수 있게 되었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍에서 실력을 쌓고 여러 경험을 해볼 수 있었습니다. 이후 다른 활동에도 정말 많은 도움이 되었어요!<br>망설이지 말고, 일단 한 번 지원해보세요 :)
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="257">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250330_220652302_-_%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%AF%E1%86%AB25.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 이주원님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        일단 도전
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기로 활동한 전공자 이주원입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        프로젝트 팀이 꾸려진 이후, 매일 데일리 스크럼을 진행하며 모두가 열정적으로 참여했고, 그만큼 팀워크도 훌륭했습니다. 계획했던 대로 프로젝트가 완성되었을 때 느꼈던 뿌듯함과 행복함은 아직도 생생합니다.<br><br>이 프로젝트는 제가 참여했던 어떤 프로젝트보다도 의견을 활발히 주고받았고, 직접 만든 페이지 수도 가장 많았습니다.<br><br>그래서인지 저에게는 인생에서 잊지 못할 소중한 경험으로 오래도록 남을 것 같습니다. :)
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 활동을 하기 전보다 실력이 눈에 띄게 향상되었고, 자신감도 많이 생겼습니다.<br>특히 저의 목표였던 백엔드 공부에 집중할 수 있었던 점이 가장 좋았습니다.<br>세션을 듣고 과제를 수행하면서, 백엔드에 대해 아무것도 몰랐던 저에서 벗어나 조금씩 이해하고 다뤄볼 수 있게 된 것이 큰 성과였습니다.<br><br>또한, 기존에 경험이 있었던 프론트엔드 분야에서도 실력이 한층 더 성장했다는 것을 느꼈습니다.<br><br>피로그래밍은 저에게 백엔드에 대한 두려움을 극복하고, 프론트엔드 실력도 함께 키울 수 있었던 값진 경험이었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        망설이지 말고, 기회가 된다면 꼭 피로그래밍에 참여해보시길 추천드립니다.<br>이미 프로젝트 경험이 있는 분들뿐만 아니라, 아직 프로젝트를 경험해보지 못한 분들까지도<br>모두가 성장할 수 있는 소중한 기회이자 든든한 밑거름이 될 거예요.<br><br>피로그래밍을 통해 한 걸음 더 나아가는 자신을 꼭 만나보시길 바랍니다. <br><br>파이팅입니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="258">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_5983_-_%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%B5803.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 임유지님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        디버깅하다 인생도 디버깅 중
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        저는 피로그래밍 22기 성균관대학교 컴퓨터교육과 임유지입니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        아무래도 MT가 가장 기억에 남았는데요, 제 생일이랑 겹쳐서 21기, 22기분들의 큰 축하를 받아 행복했습니다! 피로그래밍을 통해 좋은 예비개발자를 많~이 만난 것 같아서 기쁩니다 ㅎㅎ
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        웹개발에 대해 아무것도 모르는 초보였지만 피로그래밍 이후 웹개발을 이해하게 되었습니다. 또 2달간 아주 빡센 커리큘럼을 통해 제 끈기도 확인하는 계기가 되었습니다ㅎㅎ 저는 한다면 하는 사람이라는 것을 알게 되었습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        힘든만큼 배워가는 것이 정말 많고 후회하지 않으실거예요! 어디가서도 이렇게 짧은 시간안에 많은 내용을 배우기는 어려울 것 같아요 피로그래밍 강추합니다.
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="259">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_4669_-_%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%89%E1%85%AE120.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 임진수님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        하면 함, 가면 감.
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요👋 저는 비전공자로 동아리에 들어왔고, 피로그래밍에서의 좋은 기억을 가지고 전과를 하여 현재 ict융합학부에 재학중인 임진수입니다 : )
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        저는 팀원들과 대면으로 밤을 새서 팀 과제를 마치고 아침에 국밥을 먹고 세션에 참여했던 날이 기억에 남습니다. 새벽에 예상치 못한 오류가 해결이 되지 않아서 완성을 못 할 줄 알았는데, 끝내 극적으로 해결하고 몸은 피로하지만 가벼운 마음으로 국밥을 먹던 그 기분은 잊지 못 할 것 같아요 😭
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍 이전의 저는 문과 출신 비전공자에 개발은 커녕 컴퓨터와도 친하지 않은 사람이었습니다. 그렇기에 &quot;호기심과 열정만 가지고 이 동아리에 지원하는 것이 맞을까?&quot;하는 생각과 함께 아무리 비전공자를 위한 동아리라고 하더라도 스스로에 대한 의문은 사그라들지 않았습니다. 하지만 피로그래밍 이후의 저는 뭐든지 관심과 노력을 바치면 못 할 것은 없다는 생각이 들었고, 스스로에 대한 의문보다는 무슨 일이 찾아와도 해보자는 자신감이 앞서게 되었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발과 컴퓨터에 아예 문외한이던 저조차도 수료했습니다! 최선을 다 할 열정만 있다면 여러분들 모두가 할 수 있습니다. 그리고 피로그래밍은 혼자가 아니라 같은 열정을 가진 많은 사람들이 있기에 결코 여러분이 넘어지게 냅두지 않을거에요 ㅎㅎ. 다들 걱정말고 일단 지원해보세요! 😊
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="260">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/piro22_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%84%92%E1%85%AE%E1%86%AB_-_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%84%92%E1%85%AE%E1%86%AB337.jpeg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 장재훈님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        배울게 너무 많아
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요 피로그래밍 22기 장재훈입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        피로그래밍을 하며 했던 여러 번의 팀플 활동이 가장 기억에 남습니다! 팀플을 진행할수록 조금씩 더 사람들과의 소통하는 방법을 깨닫게 되고, 서로 부족한 부분을 채우며 앞으로 나아가다보니 좋은 결과물이 나온다는 걸 느끼게 되었습니다! 프로젝트를 진행하며 여러 사람들과 친해질 수 있는 기회도 생겨 좋았던 것 같습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍을 하기 전엔 웹 개발에 대해 무지한 상태였고, 개발자를 희망했지만 막상 어떤 걸 해야할지 모르겠는 막막한 상태였지만, 피로그래밍을 마무리 한 후, 프로젝트도 여러 번 경험하며 다양한 툴을 다룰 수 있게되고, 무시무시한 존재로만 여겨졌던 Git이 친근하게 다가왔습니다. 또한 내가 할 수 있을까? 라고 생각했던 배포도 경험하며 많은 성장을 하게되었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        고민은 시간만 늦출 뿐! 다양한 경험을 할 수 있는 피로그래밍으로~
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="261">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB_-_%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%AB670.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 정원준님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        머지할게
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍22기를 통해 웹 개발을 시작하게 된 정원준이라고 합니다. 현재 23기 기획팀장을 맡고 있습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        최종 프로젝트가 가장 기억에 남네요. 거의 한달이라는 기간 동안 상상만 했던 아이디어를 팀원들과 함께 구현해나가는 과정이 너무 즐거웠습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        여러가지 개발 기술적인 측면에서도 많이 성장했지만, 안될 것 같아도 도전해보게 되는 자세를 가지게 되었습니다. 그리고 협업의 즐거움을 알게 되었습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        웹이라곤 하나도 몰랐던 제가 피로그래밍에서 배운 것들을 바탕으로, 현재는 스타트업 인턴으로 일하고 있습니다. 웹 개발에 대해서 단기간에 배우면서 성장하고 싶으신 분들에게 강추합니다! 본인이 열심히 하려는 의지만 있다면 크게 성장할 수 있을거에요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="262">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/IMG_2437_2_-_%E1%84%8C%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%BC484.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 조주영님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        hi
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 한국외대 영어교육과에 재학중인 조주영입니다!<br>피로그래밍 22기로 활동했었고, 이번 23기 운영진으로 다시 활동하게 되었습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        비전공자로서 많은 걸 얻어가는 것 같아요. 처음에는 모든 게 낯설고 어렵게 느껴졌지만, 그래도 “내가 이걸 조금이나마 해냈다”는 경험이 정말 컸어요. 완벽하진 않아도 끝까지 포기하지 않고 따라간 그 과정 자체가 저에겐 큰 의미였던 것 같습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이전에는 개발이라는 걸 멀게만 느꼈는데, 지금은 어설퍼도 괜찮으니까 계속 해보자는 마음이 들어요. 그게 제일 큰 변화인 것 같아요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        방향을 못 잡고 있거나 빡빡한 활동을 책임지실 수 있는 분들께 추천드립니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="263">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/KakaoTalk_20250320_233916509_-_leloich_05346.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 최민석님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        지피티 프로 갈굼러
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        공간정보공학과에서 컴퓨터를 복수전공 하고 있는 22기 최민석 입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        시간을 가장 많이 투자한 만큼 마지막에 했던 팀 프로젝트 기간에 가장 기억에 남는 것 같습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        하면 된다는 자신감이 생긴 것이 가장 큰 것 같습니다. 이전에 프로젝트 경험이 없어서 다른 사이트들을 보고 &#x27;내가 열심히 하면 저런 멋진 사이트를 만들 수 있을까?&#x27; 라는 의문이 들었지만, 지금은 이 문에 자신 있게 &#x27;하면 된다!&#x27;라고 답할 수 있을 것 같습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        방학 동안 집중적으로 공부하여 성장하고 결과를 낼 수 있는 동아리가 많지 않은 것으로 알고 있습니다. 피로그래밍을 알게 됐다면, 그 기회를 놓치지 마세요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="264">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-04-04_1498.png" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 최준혁님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        오히려 좋아
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요. 피로그래밍 22기에서 CodyNow팀원으로 참여했고,<br>현재는 23기 부회장을 맡게된 최준혁이라고합니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        저는 프로젝트 최종 발표회가 가장 기억에 남는 거 같습니다 ㅎㅎ<br>한 달 동안 팀원들과 매일 늦게까지 코딩하고 회의를 하느라 힘들었지만, 그만큼 재미도 있었어요!<br>그렇게 완성한 프로젝트를 모두에게 보여주고, 현직 개발자분들께 피드백을 받으면서<br>드디어 피로그래밍이 끝났다는 실감이 나서 더욱 인상 깊었던 것 같습니다!
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        5주 동안 웹 개발부터 배포, 기획까지 빡세게 배우고, 남은 4주 동안 프로젝트를 진행하면서 진짜 몰입이 뭔지 제대로 느꼈던 것 같아요.<br>그 과정이 힘들긴 했지만, 오히려 몰입하는 경험 자체가 너무 좋았어요.<br><br>특히 피로그래밍을 마치고 나서 창업에 대한 마음이 더 커진 게 가장 큰 변화인 것 같습니다!<br>팀 프로젝트를 하면서 협업하는 법도 배우고, 직접 서비스를 배포해보면서<br>“앞으로 나만의 서비스를 만들어볼 수 있겠다” 라는 자신감이 생긴 게 큰 이유인 것 같아요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        파이썬은 대학에서 배웠지만, 웹 개발 경험은 전혀 없어서 “내가 들어가면 민폐가 되지 않을까?” 하는 걱정이 많았어요.<br>그런데 막상 해보니까 “남들보다 잘하고 싶다” 라는 열정만 있다면 전혀 문제되지 않는다는 걸 깨달았습니다 ㅎㅎ<br><br>할까 말까 고민될 때는 일단 해보는 게 답인 것 같아요.<br>피로그래밍 많이 지원해주세요!!!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="265">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/JAWS_-_%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A5804.jpg" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 한종서님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        정진
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기로 활동했던 한종서입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        3주의 시간 동안 팀원들과 최종 프로젝트를 준비했던 순간들이 가장 기억에 남아요. 살면서 이렇게 몰입하고 밀도 있는 시간을 보낸 것이 처음이었어요. 힘들고 지칠 때도 많았지만 팀원들과 함께 극복하면서 정말 열심히 살았던 최종 프로젝트 준비 기간이 가장 기억에 남습니다 :)
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        피로그래밍은 제 삶을 완전히 바꿔 놓았습니다. 2달이라는 짧은 시간 만에 내가 어떤 것을 좋아하는지, 어떤 미래를 준비해야 할지에 대한 힌트를 얻었기 때문이에요. 그뿐만 아니라 개발에 대한 자신감과 좋은 경험치를 쌓을 수 있었습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        후회없는 시간을 보내게 될 겁니다. 같이 피로해요!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="interview-detailModal displayNone" pk="266">
+  <div class="interview-modal-close">
+    <i class="ri-close-line"></i>
+  </div>
+  <div class="interview-modal-container interview-modal--header">
+    <div class="interview-pic">
+      
+        <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/profile/2025/04/04/%E1%84%86%E1%85%A5%E1%86%BC%E1%84%86%E1%85%A5%E1%86%BC_-_dao_hong619.png" alt="" />
+      
+    </div>
+    <div class="interview-modal-content">
+      <div class="interview-content--name">22기 홍다오님의 인터뷰</div>
+      <div class="interview-content--introduction">
+        야호
+      </div>
+    </div>
+  </div>
+  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/mic.png" class="mic-img" />
+  <div class="interview-modal--body">
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question1">
+        <div>Q1</div>
+        <div>자기소개 부탁드립니다.</div>
+      </div>
+      <div class="interview-detail--parag interview-answer1">
+        안녕하세요! 피로그래밍 22기로 활동했던 홍다오입니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question2">
+        <div>Q2</div>
+        <div>피로그래밍 활동 중 가장 기억에 남았던 순간은?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer2">
+        최종 프로젝트가 가장 기억에 남습니다. 아이디어 구상부터 팀 빌딩, 서비스 설계와 구현, 마지막 발표까지 전 과정을 직접 경험했는데, 단순한 &#x27;개발 실습&#x27;이 아니라 실제 사용자와 시장을 상상하며 협업하는 ‘리얼 프로젝트’였어요. 단기간에 치열하게 몰입하면서도 팀원들과 함께 웃고 고민했던 그 시간들이 제게는 잊지 못할 성장의 기록으로 남아 있습니다.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q3</div>
+        <div>피로그래밍 이전과 이후, 나의 변화는?</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        이전에는 책이나 강의로만 이론적인 부분을 접했다면, 피로그래밍 이후에는 그것들을 실제 상황에 적용하고, 팀과 함께 문제를 해결하는 과정을 통해 ‘진짜 개발자’로서의 마인드셋이 생겼어요. 특히 협업 도구, 버전 관리, 기획 문서 작성 등 실무에서 사용하는 프로세스를 직접 익힌 것이 큰 자산이 되었습니다. 혼자였다면 결코 알 수 없었던 영역들을 피로그래밍에서 자연스럽게 몸에 익힐 수 있었어요.
+      </div>
+      
+    </div>
+    <div class="interview-detail--content">
+      
+      <div class="interview-detail--title interview-question3">
+        <div>Q4</div>
+        <div>지원을 망설이는 분들에게 한 마디!</div>
+      </div>
+      <div class="interview-detail--parag interview-answer3">
+        개발을 공부하면서 혼자만의 한계를 느끼고 있던 중, 피로그래밍을 통해 진짜 &#x27;함께 만드는 개발&#x27;의 의미를 배울 수 있었던 소중한 시간이었습니다.<br>코딩 실력은 물론이고, 함께 만들어가는 과정에서 얻는 협업 경험이 정말 큽니다. 단 2달이라는 짧은 시간 동안, 몰입도 높게 ‘진짜 같은 프로젝트’를 경험할 수 있는 기회는 흔하지 않아요. 열정 넘치는 사람들과 함께 성장하고 싶은 분들께 피로그래밍은 최고의 선택이 될 거예요. 조금의 용기만 낸다면, 분명히 기대 이상의 결과를 얻게 될 겁니다!
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer id="footer-top">
+      <div class="footer-container max-width-1200">
+        <ul class="footer--contact">
+          <li>
+            <a href="/rule" class="rule-link">
+              PIROGRAMMING 회칙
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m6.333 12.666 3.253-3.252a2 2 0 0 0 0-2.828L6.333 3.333" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </a>
+          </li>
+          <div class="footer-icons">
+            <li>
+              <a href="http://pf.kakao.com/_xdHxdXK">
+                <div class="emoji">
+                  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/icons/kakao.svg" alt="kakao" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/pirogramming-project">
+                <div class="emoji">
+                  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/icons/github.svg" alt="github" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/pirogramming_official/">
+                <div class="emoji">
+                  <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/icons/instagram.svg" alt="instagram" />
+                </div>
+              </a>
+            </li>
+          </div>
+          <li>
+            <a target="_blank" href="mailto:pirogramming.official@gmail.com">
+              <div class="emoji">
+                <img src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/images/icons/gmail.svg" alt="gmail" />
+              </div>
+              pirogramming.official@gmail.com
+            </a>
+          </li>
+        </ul>
+        <ul class="footer--nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/interview/">Interview</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/recruit/">Recruit</a></li>
+          <!-- 졸업장 조회 -->
+          <!-- <li><a href="/graduate/">Graduate</a></li> -->
+        </ul>
+      </div>
+    </footer>
+    <footer id="footer-bottom">
+      <div class="footer-bottom max-width-1200">
+        <span>© Pirogramming. 2023 All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+
+  
+<script src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/js/interviewModal.js"></script>
+
+  <script type="module" src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/js/customCursor.js"></script>
+  <script src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/js/ctlNav.js"></script>
+  <script src="https://piro-homepage-bucket.s3.ap-northeast-2.amazonaws.com/js/hamburger.js"></script>
+</body>
+
+</html>

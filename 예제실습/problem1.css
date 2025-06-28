@@ -1,0 +1,29 @@
+/* default: 3단 레이아웃 */
+.responsive-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background-color: #61dafb;
+}
+
+.responsive-item {
+  background-color: #ffffff;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 조건 2: 768px 이하, 2단 */
+@media (max-width: 768px) {
+  .responsive-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 조건 3: 480px 이하, 1단 */
+@media (max-width: 480px) {
+  .responsive-container {
+    grid-template-columns: 1fr;
+    }
+}
