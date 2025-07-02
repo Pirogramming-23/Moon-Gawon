@@ -21,7 +21,21 @@ function createHTMLString(item) {
     </li>
     `;
 }
-
+function onbuttonClick(event, items) {
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+    if (key == null || value == null) {
+        return;
+    }
+    displayItems(items.filter(item => item[key] === value));
+}
+function setEventListener(items) {
+    const logo = document.querySelector('.logo');
+    const buttons = document.querySelector('.buttons');
+    logo.addEventListener('click', () => displayItems(items));
+    buttons.addEventListener('click', () => onbuttonClick(event, items));
+}
 loadItems()
     .then(items => {
     displayItems(items);
