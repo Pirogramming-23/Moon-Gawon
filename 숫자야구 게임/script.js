@@ -6,7 +6,19 @@ let attempts = 9 ;
 document.getElementById("attempts").innerText=attempts;
 const text= `남은횟수:${attempts}`;
 
-const answer=["1","2","3"];
+//TODO: 정답 난수 생성
+function random_ans(){
+    const numbers=[];
+    while(numbers.length<3){
+        const random = Math.floor(Math.random()*9)+1;
+        const stringrandom = random.toString();
+        if (!numbers.includes(stringrandom)){
+            numbers.push(stringrandom);
+        }
+    }
+    return numbers;
+}
+const answer=random_ans();
 function check_numbers(){
     const number1 = document.getElementById("number1").value;
     const number2 = document.getElementById("number2").value;
@@ -66,13 +78,15 @@ function check_numbers(){
         document.querySelector(".submit-button").disabled=true;
         document.querySelector(".submit-button").style.backgroundColor = "red";
     }
-    else if(attempts>=3){
+    else if(strike>=3){
         const resultimg= document.getElementById("game-result-img");    
         resultimg.src= "success.png";
         resultimg.style.display="block";
         document.querySelector(".submit-button").disabled=true;
         document.querySelector(".submit-button").style.backgroundColor = "red";
     }
+
+
 
 
 }
