@@ -13,9 +13,7 @@
   --size-thumbnail: 50px;
   --animation-duration: 300ms;
 }
-* {
-  box-sizing: border-box;
-}
+
 
 
 body{
