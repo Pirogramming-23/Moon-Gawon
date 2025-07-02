@@ -1,44 +1,58 @@
-//main
+// main.js
+
 function loadItems() {
-    return fetch('data/data.json')
+  return fetch('data/data.json')
     .then(response => response.json())
-    .then(json => console.items);
-}
-//Update the list
-function displayItems(items) {
-    const container = document.querySelector('.items');
-    const html = items.map(item => createHTMLString(item));
-    console.log(html);
-    container.innerHTML = items.map(item => createHTMLString(item)).join('');
+    .then(json => json.items);
 }
 
-//create HTML
+function displayItems(items) {
+  const container = document.querySelector('.items');
+  container.innerHTML = items.map(item => createHTMLString(item)).join('');
+}
+
 function createHTMLString(item) {
-    return`
+  return `
     <li class="item">
-        <img src="${item.image} alt="${item.type}" class="item_thumbnail" />
-        <span class="item_description">${item.gender},${item.size}</span>
+      <img src="${item.image}" alt="${item.type}" class="item__thumbnail" />
+      <span class="item__description">${item.gender}, ${item.size}</span>
     </li>
-    `;
+  `;
 }
+
 function onbuttonClick(event, items) {
-    const dataset = event.target.dataset;
-    const key = dataset.key;
-    const value = dataset.value;
-    if (key == null || value == null) {
-        return;
-    }
-    displayItems(items.filter(item => item[key] === value));
+  const target = event.target;
+  const key = target.dataset.key;
+  const value = target.dataset.value;
+  if (key == null || value == null) {
+    return;
+  }
+  const filtered= items.filter(item => item[key] === value);
+  displayItems(filtered);
+  // updateItems(items, key, value);
 }
+
+// function updateItems(items, key, value) {
+//   const elements = document.querySelectorAll('.item');
+//   elements.forEach((element, index) => {
+//     if (items[index][key] === value) {
+//       element.classList.remove('invisible');
+//     } else {
+//       element.classList.add('invisible');
+//     }
+//   });
+// }
+
 function setEventListener(items) {
-    const logo = document.querySelector('.logo');
-    const buttons = document.querySelector('.buttons');
-    logo.addEventListener('click', () => displayItems(items));
-    buttons.addEventListener('click', () => onbuttonClick(event, items));
+  const logo = document.querySelector('.logo');
+  const buttons = document.querySelector('.buttons');
+  logo.addEventListener('click', () => displayItems(items));
+  buttons.addEventListener('click', event => onbuttonClick(event, items));
 }
+
 loadItems()
-    .then(items => {
+  .then(items => {
     displayItems(items);
-    //setEvelntLIstener(items);
-})
-.catch(console.log)
+    setEventListener(items);
+  })
+  .catch(console.log);
