@@ -55,13 +55,13 @@ function check_numbers(){
     }
     let result =`${input.join("")}=`;
     if(strike===0 && ball===0){
-        result+=`0`;
+        result+=`<span class="out">0</span>`;
     }
     else if(strike>0){
-        result+=`${strike}`;
+        result+=`${strike}<span class="strike">S</span>`;
     }
     else if(ball>0){
-        result+=`${ball}`;
+        result+=`${ball}<span class="ball">B</span>`;
     }
     const results= document.getElementById("results");
     results.innerHTML += result+ `<br>`;
