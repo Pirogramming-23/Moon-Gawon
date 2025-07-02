@@ -1,6 +1,11 @@
 // @ts-nocheck
 //TODO: 숫자 비교 스트라이크 볼 처리
 
+let attempts = 9 ;
+
+document.getElementById("attempts").innerText=attempts;
+const text= `남은횟수:${attempts}`;
+
 const answer=["1","2","3"];
 function check_numbers(){
     const number1 = document.getElementById("number1").value;
@@ -19,6 +24,7 @@ function check_numbers(){
         document.getElementById("number1").value ="";
         document.getElementById("number2").value ="";
         document.getElementById("number3").value ="";
+        alert("입력값을 채워주세요.");
         return;
     }
 
@@ -47,6 +53,26 @@ function check_numbers(){
     }
     const results= document.getElementById("results");
     results.innerHTML += result+ `<br>`;
+
+    if(attempts>0){
+        attempts--;
+        document.getElementById("attempts").innerText = attempts;
+    }
+    
+    if(attempts===0){
+        const resultimg= document.getElementById("game-result-img");    
+        resultimg.src= "fail.png";
+        resultimg.style.display="block";
+        document.querySelector(".submit-button").disabled=true;
+        document.querySelector(".submit-button").style.backgroundColor = "red";
+    }
+    else if(attempts>=3){
+        const resultimg= document.getElementById("game-result-img");    
+        resultimg.src= "success.png";
+        resultimg.style.display="block";
+        document.querySelector(".submit-button").disabled=true;
+        document.querySelector(".submit-button").style.backgroundColor = "red";
+    }
 
 
 }
