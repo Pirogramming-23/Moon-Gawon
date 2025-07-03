@@ -1,5 +1,0 @@
-git add "파이썬 과제/20-8.png"
-
-git commit -m "20-8"
-
-git push origin Assignment
