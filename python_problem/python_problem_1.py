@@ -4,11 +4,17 @@ num = 0
 
 # 3단계: if문을 사용하여 올바른지 확인
 while True:
-    a = int(input("정수를 입력하세요: "))
-    if a <= 0:
-            print("정수를 입력해주세요.")
-            continue
-    if a not in [1, 2, 3]:
-            print("1, 2, 3 중 하나를 입력해주세요.")
-            continue
-    break
+    while True:
+        a = int(input("정수를 입력하세요: "))
+        if a <= 0:
+                print("정수를 입력해주세요.")
+                continue
+        if a not in [1, 2, 3]:
+                print("1, 2, 3 중 하나를 입력해주세요.")
+                continue
+        break
+
+    #4단계: 입력받은 값
+    for _ in range(a):
+        num += 1
+        print(f"playerA: {num}")
