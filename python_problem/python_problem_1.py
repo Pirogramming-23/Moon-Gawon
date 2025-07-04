@@ -22,5 +22,9 @@ while True:
     for _ in range(a):
         num += 1
         print(f"{players[turn]}: {num}")
+        if num >= 31:
+            exit()
     turn = (num - 1) % 2
+    
     # 5단계: 입력받은 값
+
