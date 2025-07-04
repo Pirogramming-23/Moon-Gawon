@@ -23,6 +23,7 @@ while True:
         num += 1
         print(f"{players[turn]}: {num}")
         if num >= 31:
+            print(f"{players[turn-1]} win!")
             exit()
     turn = (num - 1) % 2
     
