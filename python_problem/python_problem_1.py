@@ -1,4 +1,14 @@
 # 1단계: 변수 선언
 num = 0
 # 2단계: input() 값으로 정수입력받기
-a = int(input("정수를 입력하세요: "))
+
+# 3단계: if문을 사용하여 올바른지 확인
+while True:
+    a = int(input("정수를 입력하세요: "))
+    if a <= 0:
+            print("정수를 입력해주세요.")
+            continue
+    if a not in [1, 2, 3]:
+            print("1, 2, 3 중 하나를 입력해주세요.")
+            continue
+    break
