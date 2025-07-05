@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>피로그래밍 스톱워치</title>
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    
+    <h1>⏱ 피로그래밍 스톱워치</h1>
+    <div class="stopwatch-container">
+
+        <div class="time-display" id="display">00:00</div>
+
+        <div class="buttons">
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
+        </div>
+
+        <div class="record-container">
+            <div class="record-header">
+                <div class="record-controls">
+                    <input type="checkbox" id="toggle-all" />
+                    <label for="toggle-all">전체 선택</label>
+                </div>
+                    <span>구간 기록</span>
+                    <button id="delete-checked">🗑️</button>
+                </div>
+                <ul id="record-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

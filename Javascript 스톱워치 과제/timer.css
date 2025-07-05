@@ -1,0 +1,80 @@
+body {
+    text-align: center;
+    background: #f9f9f9;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.stopwatch-container {
+    background: #bfc8bd;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.time-display {
+    font-size: 48px;
+    background: #fff;
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: #eee;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.record-container {
+    margin-top: 30px;
+    display: inline-block;
+    width: 300px;
+}
+
+.record-header {
+    background: #bfc8bd;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 10px 0;
+}
+
+.record-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#record-list {
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#record-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    gap: 10px;
+}
+
+.record-checkbox {
+    margin-right: 10px;
+}
