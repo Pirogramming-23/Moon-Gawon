@@ -27,5 +27,5 @@ class Review(models.Model):
     year = models.PositiveIntegerField(default=2000)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    # ✅ 이미지 필드 추가 (media/reviews/ 에 저장됨)
+
     img = models.ImageField(upload_to='reviews/', null=True, blank=True)
