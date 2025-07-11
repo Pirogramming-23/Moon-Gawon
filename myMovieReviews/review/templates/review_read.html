@@ -1,8 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <div style="max-width: 900px; margin: 40px auto; font-family: 'Arial', sans-serif;">
-    <h1 style="font-size: 28px; margin-bottom: 20px;">{{ reviews.title }}</h1>
 
+    <!-- 제목 + 버튼 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1 style="font-size: 28px; margin: 0;">{{ reviews.title }}</h1>
+        <div>
+            <a href="{% url 'review_update' reviews.id %}" style="margin-right: 10px; color: blue;">수정</a>
+            <a href="{% url 'review_delete' reviews.id %}" style="color: red;" onclick="return confirm('정말 삭제하시겠습니까?')">삭제</a>
+        </div>
+    </div>
+
+    <!-- 포스터 + 영화 정보 -->
     <div style="display: flex; gap: 30px; background: #f6f6f6; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
         {% if reviews.img %}
         <div style="flex: 1;">
@@ -19,14 +28,11 @@
         </div>
     </div>
 
+    <!-- 리뷰 내용 -->
     <div style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 10px; line-height: 1.6; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
         <h3 style="margin-bottom: 10px;">리뷰 내용</h3>
         <p>{{ reviews.content|linebreaks }}</p>
     </div>
 
-    <div style="margin-top: 20px; text-align: right;">
-        <a href="{% url 'review_update' reviews.id %}" style="margin-right: 10px; color: blue;">수정</a>
-        <a href="{% url 'review_delete' reviews.id %}" style="color: red;" onclick="return confirm('정말 삭제하시겠습니까?')">삭제</a>
-    </div>
 </div>
 {% endblock %}
