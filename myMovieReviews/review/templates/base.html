@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Movie Reviews{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        .navbar {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .navbar .right a {
+            font-size: 14px;
+            color: #007BFF;
+        }
+        .content {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'review_list' %}">my <span style="color:red">Movie</span> reviews</a>
+        <div class="right">
+            <a href="{% url 'review_create' %}">Add a New review</a>
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
