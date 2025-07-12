@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}리뷰 목록{% endblock %}
+{% block content %}
+<h2 style="margin-bottom: 30px;">리뷰 목록</h2>
+
+<div class="grid">
+    {% for reviews in review %}
+        <a href="{% url 'review_read' reviews.id %}" class="card">
+            {% if reviews.img %}
+                <img src="{{ reviews.img.url }}" alt="poster" class="poster">
+            {% endif %}
+            <div class="title">{{ reviews.title }}</div>
+            <div class="meta">개봉년도 {{ reviews.year }}년</div>
+            <div class="meta">장르 {{ reviews.genre }}</div>
+            <div class="meta">별점 {{ reviews.rating }}</div>
+        </a>
+    {% endfor %}
+</div>
+
+<style>
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: start;
+    }
+
+    .card {
+        width: 200px;
+        background-color: #f4f4f4;
+        border-radius: 12px;
+        padding: 20px;
+        text-decoration: none;
+        color: #222;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .poster {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .meta {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 4px;
+    }
+</style>
+{% endblock %}
