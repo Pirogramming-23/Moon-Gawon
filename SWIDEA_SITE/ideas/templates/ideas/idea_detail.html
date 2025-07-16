@@ -69,17 +69,36 @@
 </style>
 
 <div class="container">
-    <h2>{{ idea.title }} {% if idea.starred %}★{% endif %}</h2>
+    <!-- 제목 + 찜 별 -->
+    <h2>
+        {{ idea.title }}
+        {% if starred %}
+            <span style="color: gold; font-size: 24px;">★</span>
+        {% endif %}
+    </h2>
+
+    <!-- 이미지 -->
     {% if idea.image %}
         <img src="{{ idea.image.url }}" alt="{{ idea.title }}">
     {% endif %}
 
+    <!-- 상세 정보 -->
     <div class="info">
         <p>1 아이디어 관심도: {{ idea.interest }}</p>
-        <p>2 예상 개발툴: <span style="color: #90ee90;">{{ idea.dev_tool }}</span></p>
+        <p>
+            2 예상 개발툴: 
+            {% if idea.dev_tool %}
+                <a href="{% url 'devtool_detail' idea.dev_tool.pk %}" style="color: lightgreen; font-weight: bold;">
+                    {{ idea.dev_tool.name }}
+                </a>
+            {% else %}
+                <span style="color: gray;">없음</span>
+            {% endif %}
+        </p>
         <p>3 아이디어 설명:<br>{{ idea.content }}</p>
     </div>
 
+    <!-- 버튼 -->
     <div class="btn-group">
         <a href="{% url 'idea_delete' idea.pk %}" class="btn-delete">삭제</a>
         <a href="{% url 'idea_list' %}" class="btn-list">목록</a>

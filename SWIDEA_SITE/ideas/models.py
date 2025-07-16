@@ -31,7 +31,7 @@ class IdeaStar(models.Model):
 
 class DevTool(models.Model):
     name = models.CharField(max_length=100)           # 툴 이름
-    type = models.CharField(max_length=100, default='기타')          # 툴 종류 (이전: 공식 URL)
+    type = models.CharField(max_length=100, blank=True, null=True)          # 툴 종류 (이전: 공식 URL)
     description = models.TextField(blank=True)        # 툴 설명
 
     def __str__(self):
