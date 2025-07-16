@@ -1,0 +1,99 @@
+{% extends "ideas/base.html" %}
+{% load static %}
+
+{% block title %}아이디어 작성/수정{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background: url("{% static 'ideas/bg.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+    }
+
+    .container {
+        margin: 60px auto;
+        max-width: 600px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+        text-align: center;
+        color: #adff2f;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+        height: 150px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #adff2f;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #cfff4f;
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #ccc;
+        text-decoration: none;
+    }
+
+    .back-link:hover {
+        color: #fff;
+    }
+</style>
+
+<div class="container">
+    <h2>아이디어 작성/수정</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="아이디어 제목" value="{{ form.title.value|default_if_none:'' }}">
+        <!-- 예상 개발툴 (드롭다운) -->
+        <select name="dev_tool">
+            {% for tool in form.dev_tool.field.queryset %}
+            <option value="{{ tool.id }}" {% if tool.id == form.dev_tool.value %}selected{% endif %}>{{ tool.name }}</option>
+            {% endfor %}
+        </select>
+
+        <!-- 관심도 -->
+        <input type="number" name="interest" placeholder="아이디어 관심도" value="{{ form.interest.value|default_if_none:0 }}" min="0" max="100">
+
+        <!-- 내용 -->
+        <textarea name="content" placeholder="아이디어 설명">{{ form.content.value|default_if_none:'' }}</textarea>
+
+        <!-- 이미지 -->
+        <input type="file" name="img">
+
+        <button type="submit">SUBMIT</button>
+    </form>
+    <a href="{% url 'idea_list' %}" class="back-link">← 목록으로</a>
+</div>
+{% endblock %}
