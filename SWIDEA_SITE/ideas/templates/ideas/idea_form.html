@@ -28,7 +28,9 @@
 
     input[type="text"],
     input[type="file"],
-    textarea {
+    textarea,
+    select,
+    input[type="number"] {
         width: 100%;
         padding: 12px;
         margin-bottom: 20px;
@@ -75,22 +77,25 @@
     <h2>아이디어 작성/수정</h2>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="text" name="title" placeholder="아이디어 제목" value="{{ form.title.value|default_if_none:'' }}">
-        <!-- 예상 개발툴 (드롭다운) -->
-        <select name="dev_tool">
-            {% for tool in form.dev_tool.field.queryset %}
-            <option value="{{ tool.id }}" {% if tool.id == form.dev_tool.value %}selected{% endif %}>{{ tool.name }}</option>
+        <input type="text" name="title" placeholder="아이디어 제목" value="{{ idea.title|default:'' }}">
+
+        <!-- DevTool select -->
+        <select name="dev_tool" required>
+            {% for tool in devtools %}
+                <option value="{{ tool.id }}" {% if idea.dev_tool and idea.dev_tool.id == tool.id %}selected{% endif %}>
+                    {{ tool.name }}
+                </option>
             {% endfor %}
         </select>
 
         <!-- 관심도 -->
-        <input type="number" name="interest" placeholder="아이디어 관심도" value="{{ form.interest.value|default_if_none:0 }}" min="0" max="100">
+        <input type="number" name="interest" placeholder="아이디어 관심도" value="{{ idea.interest|default:0 }}" min="0" max="100">
 
         <!-- 내용 -->
-        <textarea name="content" placeholder="아이디어 설명">{{ form.content.value|default_if_none:'' }}</textarea>
+        <textarea name="content" placeholder="아이디어 설명">{{ idea.content|default:'' }}</textarea>
 
         <!-- 이미지 -->
-        <input type="file" name="img">
+        <input type="file" name="image">
 
         <button type="submit">SUBMIT</button>
     </form>

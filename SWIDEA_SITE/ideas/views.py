@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.db.models import Count
 from .forms import DevToolForm
+from .forms import IdeaForm
 
 # ✅ 아이디어 리스트
 def idea_list(request):
@@ -43,27 +44,44 @@ def idea_detail(request, pk):
 # ✅ 아이디어 생성
 def idea_create(request):
     if request.method == 'POST':
-        title = request.POST['title']
-        content = request.POST['content']
-        dev_tool = request.POST['dev_tool']
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        dev_tool_id = request.POST.get('dev_tool')  # get() 사용하면 에러 안남
         image = request.FILES.get('image')
-        Idea.objects.create(title=title, content=content, dev_tool=dev_tool, image=image)
-        return redirect('idea_list')
-    return render(request, 'ideas/idea_form.html')
+
+        dev_tool = DevTool.objects.get(pk=dev_tool_id) if dev_tool_id else None
+
+        idea = Idea.objects.create(
+            title=title,
+            content=content,
+            dev_tool=dev_tool,
+            image=image
+        )
+        return redirect('idea_detail', pk=idea.pk)
+
+    devtools = DevTool.objects.all()
+    return render(request, 'ideas/idea_form.html', {'devtools': devtools})
 
 # ✅ 아이디어 수정
 def idea_edit(request, pk):
     idea = get_object_or_404(Idea, pk=pk)
     if request.method == 'POST':
-        idea.title = request.POST['title']
-        idea.content = request.POST['content']
-        idea.dev_tool = request.POST['dev_tool']
+        idea.title = request.POST.get('title')
+        idea.content = request.POST.get('content')
+        dev_tool_id = request.POST.get('dev_tool')
+        if dev_tool_id:
+            idea.dev_tool = DevTool.objects.get(pk=dev_tool_id)
         if request.FILES.get('image'):
             idea.image = request.FILES['image']
         idea.save()
         return redirect('idea_detail', pk=pk)
-    return render(request, 'ideas/idea_form.html', {'idea': idea})
 
+    # 여기 중요: devtools를 넘겨줘야 select에 보임
+    devtools = DevTool.objects.all()
+    return render(request, 'ideas/idea_form.html', {
+        'idea': idea,
+        'devtools': devtools
+    })
 # ✅ 아이디어 삭제
 def idea_delete(request, pk):
     idea = get_object_or_404(Idea, pk=pk)
@@ -113,22 +131,25 @@ def devtool_list(request):
 # ✅ 개발툴 상세
 def devtool_detail(request, pk):
     devtool = get_object_or_404(DevTool, pk=pk)
-    return render(request, 'ideas/devtool_detail.html', {'devtool': devtool})
+    ideas = Idea.objects.filter(dev_tool=devtool)  # 연결된 아이디어들
+    return render(request, 'ideas/devtool_detail.html', {
+        'devtool': devtool,
+        'ideas': ideas  # 넘겨줌
+    })
 
-# ✅ 개발툴 수정
+
 def devtool_edit(request, pk):
-    tool = get_object_or_404(DevTool, pk=pk)
+    devtool = get_object_or_404(DevTool, pk=pk)
     if request.method == 'POST':
-        form = DevToolForm(request.POST, instance=tool)
+        form = DevToolForm(request.POST, instance=devtool)
         if form.is_valid():
             form.save()
-            return redirect('devtool_detail', pk=tool.pk)
+            return redirect('devtool_detail', pk=pk)
     else:
-        form = DevToolForm(instance=tool)
-
+        form = DevToolForm(instance=devtool)
     return render(request, 'ideas/devtool_form.html', {
         'form': form,
-        'tool': tool,
+        'is_edit': True  # 템플릿에서 수정 모드 구분 가능
     })
 
 def devtool_delete(request, pk):
