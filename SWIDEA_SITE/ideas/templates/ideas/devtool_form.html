@@ -1,0 +1,81 @@
+{% extends "ideas/base.html" %}
+{% load static %}
+
+{% block title %}개발툴 등록/수정{% endblock %}
+
+{% block content %}
+<style>
+    .form-container {
+        margin: 60px auto;
+        max-width: 600px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        color: #fff;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #adff2f;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="file"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+        height: 150px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #adff2f;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #cfff4f;
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #ccc;
+        text-decoration: none;
+    }
+
+    .back-link:hover {
+        color: #fff;
+    }
+</style>
+
+<div class="form-container">
+    <h2>개발툴 등록/수정</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.type }}
+        {{ form.description }}
+        <button type="submit">SUBMIT</button>
+    </form>
+    <a href="{% url 'devtool_list' %}" class="back-link">← 목록으로</a>
+</div>
+{% endblock %}

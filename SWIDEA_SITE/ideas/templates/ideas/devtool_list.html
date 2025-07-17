@@ -1,0 +1,93 @@
+{% extends "ideas/base.html" %}
+{% load static %}
+
+{% block title %}DevTool List{% endblock %}
+
+{% block content %}
+<style>
+    .list-container {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .list-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #adff2f;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .list-subtitle {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 16px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+    }
+
+    th {
+        color: #adff2f;
+        font-size: 18px;
+    }
+
+    td a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    td a:hover {
+        color: #adff2f;
+    }
+
+    .desc {
+        color: #ddd;
+        font-size: 14px;
+    }
+</style>
+
+<div class="list-container">
+    <div class="list-title">DevTool List</div>
+    <div class="list-subtitle">개발툴 등록 페이지에서 입력한 툴 종류와 함께 정렬된 목록을 보여줍니다.</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>툴 이름</th>
+                <th>툴 종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tool in devtools %}
+                <tr>
+                    <td>
+                        <a href="{% url 'devtool_detail' tool.pk %}">
+                            {{ tool.name }}
+                        </a>
+                    </td>
+                    <td>{{ tool.type }}</td>
+                    <td class="desc">{{ tool.description|truncatechars:80 }}</td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="3">등록된 개발툴이 없습니다.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

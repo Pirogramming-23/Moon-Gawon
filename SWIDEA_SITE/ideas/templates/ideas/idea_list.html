@@ -1,0 +1,46 @@
+{% extends "ideas/base.html" %}
+{% block title %}아이디어 관리{% endblock %}
+
+{% block content %}
+<div class="idea-container">
+    <!-- 정렬 드롭다운 박스 -->
+    <div class="sort-box-inside">
+        <form method="get">
+            <select name="sort" onchange="this.form.submit()">
+                <option value="">--정렬기준--</option>
+                <option value="likes" {% if request.GET.sort == 'likes' %}selected{% endif %}>찜하기순</option>
+                <option value="title" {% if request.GET.sort == 'title' %}selected{% endif %}>이름순</option>
+                <option value="created" {% if request.GET.sort == 'created' %}selected{% endif %}>등록순</option>
+                <option value="latest" {% if request.GET.sort == 'latest' or not request.GET.sort %}selected{% endif %}>최신순</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- 카드 리스트 -->
+    <div class="card-grid">
+        {% for idea in ideas %}
+        <div class="idea-card">
+            <div class="star-icon"
+                data-id="{{ idea.id }}"
+                onclick="toggleStar({{ idea.id }})"
+                style="color: {% if idea.starred %}gold{% else %}#999{% endif %};">
+                {% if idea.starred %}★{% else %}☆{% endif %}
+            </div>
+
+            {% if idea.image %}
+            <img src="{{ idea.image.url }}" alt="{{ idea.title }}">
+            {% endif %}
+
+            <h3><a href="{% url 'idea_detail' idea.id %}">{{ idea.title }}</a></h3>
+            <p>예상 개발툴: {{ idea.dev_tool }}</p>
+            <p>
+                아이디어 관심도:
+                <button onclick="adjustInterest({{ idea.id }}, 'up')">+</button>
+                <span class="interest-value">{{ idea.interest }}</span>
+                <button onclick="adjustInterest({{ idea.id }}, 'down')">-</button>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

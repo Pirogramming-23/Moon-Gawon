@@ -1,0 +1,112 @@
+{% extends "ideas/base.html" %}
+{% load static %}
+
+{% block title %}DevTool Detail{% endblock %}
+
+{% block content %}
+<style>
+    .detail-wrapper {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.07);
+        color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .devtool-title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #adff2f;
+        margin-bottom: 20px;
+    }
+
+    .devtool-description {
+        font-size: 18px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+        border-left: 4px solid #adff2f;
+        padding-left: 16px;
+    }
+
+    .section-title {
+        color: #adff2f;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .idea-list {
+        margin-left: 16px;
+    }
+
+    .idea-list li {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .idea-list a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .idea-list a:hover {
+        color: #adff2f;
+    }
+
+    .button-group {
+        margin-top: 40px;
+        display: flex;
+        gap: 12px;
+    }
+
+    .button-group a {
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .btn-edit {
+        background-color: #89CFF0;
+        color: black;
+    }
+
+    .btn-delete {
+        background-color: #FF5E5E;
+        color: white;
+    }
+
+    .btn-list {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<div class="detail-wrapper">
+    <div class="devtool-title">{{ devtool.name }}</div>
+
+    <div class="devtool-description">
+        {{ devtool.description }}
+    </div>
+
+    <div class="section-title">➤ 만들 수 있는 SW 목록</div>
+    <ul class="idea-list">
+        {% for idea in ideas %}
+            <li>
+                <a href="{% url 'idea_detail' idea.pk %}">{{ idea.title }}</a>
+            </li>
+        {% empty %}
+            <li style="color: #ccc;">등록된 아이디어가 없습니다.</li>
+        {% endfor %}
+    </ul>
+
+    <div class="button-group">
+        <a href="{% url 'devtool_edit' devtool.pk %}" class="btn-edit">수정</a>
+        <a href="{% url 'devtool_delete' devtool.pk %}" class="btn-delete">삭제</a>
+        <a href="{% url 'devtool_list' %}" class="btn-list">목록</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}SW Idea Manage{% endblock %}</title>
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <link rel="stylesheet" href="{% static 'ideas/style.css' %}">
+    <script src="{% static 'ideas/idea.js' %}"></script>
+    <style>
+        body {
+            background: url("{% static 'ideas/bg.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* nav 스타일 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            {% comment %} background-color: #0d0d0d; {% endcomment %}
+            padding: 20px 40px;
+            border-bottom: 1px solid #444;
+        }
+
+        nav h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav h1 span {
+            color: #9eff51;
+        }
+
+        .nav_h2 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav_h2 h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .nav_h2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav_h2 a:hover {
+            text-decoration: underline;
+            color: #90ee90;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ✅ 공통 상단 네비게이션 -->
+<nav>
+    <h1>My <span>SW Idea</span> Manage</h1>
+    <div class="nav_h2">
+        <h2><a href="{% url 'idea_create' %}">아이디어 등록</a></h2>
+        <h2><a href="{% url 'idea_list' %}">아이디어 관리</a></h2>
+        <h2><a href="{% url 'devtool_create' %}">개발툴 등록</a></h2>
+        <h2><a href="{% url 'devtool_list' %}">개발툴 관리</a></h2>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
