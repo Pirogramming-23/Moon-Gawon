@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>게시물 상세</title>
+    <link rel="stylesheet" href="{% static 'pirostagram/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'pirostagram/pirostagram.css' %}">
+</head>
+<body>
+    <div class="post-detail">
+        <!-- 게시물 이미지 -->
+        <img src="{{ post.image.url }}" alt="post image" width="300" />
+        <p>{{ post.content }}</p>
+
+        <!-- 좋아요 버튼 -->
+        <button onclick="likePost({{ post.id }})" id="like-btn-{{ post.id }}">
+            {% if user in post.likes.all %}❤️{% else %}🤍{% endif %}
+        </button>
+        <span id="like-count-{{ post.id }}">{{ post.likes.count }}</span> Likes
+
+        <!-- 댓글 리스트 -->
+        <ul id="comment-list-{{ post.id }}">
+            {% for comment in comments %}
+                <li id="comment-{{ comment.id }}">
+                    <b>{{ comment.user.username }}</b>: {{ comment.content }}
+                    {% if comment.user == user %}
+                        <button onclick="deleteComment({{ comment.id }})">삭제</button>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- 댓글 입력창 -->
+        {% csrf_token %}
+        <input type="text" id="comment-input-{{ post.id }}" placeholder="댓글 달기...">
+        <button type="button" class="comment-btn" data-post-id="{{ post.id }}">게시</button>
+    </div>
+<script src="{% static 'pirostagram/main.js' %}"></script>
+</body>
+</html>
