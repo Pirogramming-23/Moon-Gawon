@@ -24,6 +24,10 @@ const likePost = async (postId) => {
 
     const data = await res.json();
     document.getElementById(`like-count-${postId}`).innerText = data.like_count;
+    const btn = document.getElementById(`like-btn-${postId}`);
+    if (btn) {
+        btn.innerText = data.liked ? "❤️" : "🤍";
+    }
 };
 
 

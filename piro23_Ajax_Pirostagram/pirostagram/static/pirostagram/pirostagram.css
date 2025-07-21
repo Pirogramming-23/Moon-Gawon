@@ -99,6 +99,7 @@ main > div:nth-child(odd){
   width: 33.33%;     /* 한 줄에 3개 꽉 차게 */
   aspect-ratio: 1/1; /* 정사각형 유지 */
   overflow: hidden;
+  margin-bottom: 0.4rem;
 }
 
 .content__photo img {
