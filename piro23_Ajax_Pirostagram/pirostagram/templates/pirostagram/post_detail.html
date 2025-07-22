@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 상세</title>
+    <link rel="stylesheet" href="{% static 'pirostagram/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'pirostagram/post_detail.css' %}">
+</head>
+<body>
+    <div class="detail-wrapper">
+        <!-- 왼쪽 이미지 영역 -->
+        <div class="detail-image">
+            <img src="{{ post.image.url }}" alt="post image">
+        </div>
+
+        <!-- 오른쪽 댓글 및 내용 영역 -->
+        <div class="detail-content">
+            <!-- 유저 정보 및 본문 -->
+            <div class="detail-user">
+                <b>{{ post.user.username }}</b>
+                <p>{{ post.content }}</p>
+            </div>
+
+            <!-- 댓글 목록 -->
+            <ul class="comment-list" id="comment-list-{{ post.id }}">
+                {% for comment in comments %}
+                <li id="comment-{{ comment.id }}">
+                    <b>{{ comment.user.username }}</b> {{ comment.content }}
+                    {% if comment.user == user %}
+                        <button onclick="deleteComment({{ comment.id }})">삭제</button>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+
+            <!-- 좋아요 영역 -->
+            <div class="detail-like">
+                <button onclick="likePost({{ post.id }})" id="like-btn-{{ post.id }}">
+                    {% if user in post.likes.all %}❤️{% else %}🤍{% endif %}
+                </button>
+                <span id="like-count-{{ post.id }}">{{ post.likes.count }}</span> Likes
+            </div>
+
+            <!-- 댓글 입력창 -->
+            <div class="comment-input">
+                {% csrf_token %}
+                <input type="text" id="comment-input-{{ post.id }}" placeholder="댓글 달기...">
+                <button type="button" class="comment-btn" data-post-id="{{ post.id }}">게시</button>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'pirostagram/main.js' %}"></script>
+</body>
+</html>

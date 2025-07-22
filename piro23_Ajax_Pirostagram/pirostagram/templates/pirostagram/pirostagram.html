@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'pirostagram/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'pirostagram/pirostagram.css' %}">
+    <script src="https://kit.fontawesome.com/7d6a50a6b2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="header__icon"><i class="fas fa-cog"></i></div>
+        <div class="header__username">pirogramming</div>
+        <div class="header__icon"><i class="fas fa-user-plus"></i></div>
+      </div>
+    </header>
+    <main>
+      <div class="profile">
+        <div class="profile__top">
+          <div class="profile__img">
+            <img src="{% static 'pirostagram/images/piro.jpg' %}" alt="프로필이미지">
+          </div>
+          <div class="profile__right">
+            <div class="profile__username">pirogramming</div>
+            <div class="profile__btn"><button>프로필 편집</button></div>
+          </div>
+        </div>
+        <div class="profile__bottom">
+          <span class="profile__name">피로그래밍</span><br />
+          <span class="profile__info">프로그래밍의 첫 걸음, 피로그래밍👋<br />피로그래밍은 웹 개발 공부를 위한 ‘정규 세션’과 한달간의 ‘웹 서비스 개발 프로젝트‘로 구성됩니다.</span><br />
+          <span class="profile__name">문의 : 카카오톡플러스친구(@피로그래밍)</span><br />
+        </div>
+      </div>
+      <div class="story">
+        <div class="story__container">
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/1.jpg' %}" alt="스토리1">
+            </div>
+            <div class="story__title">23기활동</div>
+          </div>
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/2.jpg' %}" alt="스토리2">
+            </div>
+            <div class="story__title">22기활동</div>
+          </div>
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/3.jpg' %}" alt="스토리3">
+            </div>
+            <div class="story__title">22기 QnA</div>
+          </div>
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/4.jpg' %}" alt="스토리4">
+            </div>
+            <div class="story__title">21기 QnA</div>
+          </div>
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/5.jpg' %}" alt="스토리5">
+            </div>
+            <div class="story__title">19기 활동</div>
+          </div>
+          <div class="story__content">
+            <div class="story__img">
+              <img src="{% static 'pirostagram/images/6.jpg' %}" alt="스토리6">
+            </div>
+            <div class="story__title">19기 QnA</div>
+          </div>
+        </div>
+      </div>
+      <div class="toolbar">     </div>
+      <div class="content">
+        <div class="content__container">
+          {% for post in posts %}
+            {% if post.id and post.image %}
+              <div class="content__photo">
+                <a href="{% url 'pirostagram:post_detail' post.id %}">
+                  <img src="{{ post.image.url }}" alt="게시물 이미지">
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__item"><i class="fas fa-home"></i></div>
+        <div class="footer__item"><i class="fas fa-search"></i></div>
+        <div class="footer__item"><i class="far fa-plus-square"></i></div>
+        <div class="footer__item"><i class="far fa-heart"></i></div>
+        <div class="footer__image"><img src="{% static 'pirostagram/images/piro.jpg' %}" alt="프로필이미지"></div>
+      </div>
+    </footer>
+  </body>
+</html>
